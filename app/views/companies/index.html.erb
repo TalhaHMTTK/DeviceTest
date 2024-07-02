@@ -1,0 +1,50 @@
+<h3 class="text-center my-4">All Companies</h3>
+
+<div class="container">
+  <div class="row">
+    <% @companies.each do |company| %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+          <div class="card-body" style="background: linear-gradient(135deg, #007bff, #00c6ff); color: white;">
+            <h5 class="card-title"><%= company.email %></h5>
+            <p class="card-text"><%= company.created_at.strftime("%B %d, %Y %I:%M %p") %></p>
+            <%= link_to 'Get Details', class: 'btn btn-light' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<style>
+  .card-body {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card-body:hover {
+    transform: scale(1.05);
+  }
+
+  .card-title {
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-light {
+    background-color: #f8f9fa;
+    color: #007bff;
+    border: none;
+  }
+
+  .btn-light:hover {
+    background-color: #e2e6ea;
+  }
+</style>

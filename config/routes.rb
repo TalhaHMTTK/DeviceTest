@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :companies, controllers: { registrations: 'companies/registrations',
+  sessions: 'companies/sessions',
+  passwords: 'companies/passwords'
+}
+  resources :companies, only: [:index, :show]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -7,5 +12,5 @@ Rails.application.routes.draw do
 
   get "home/nav" => "home#nav"
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "companies#index"
 end
