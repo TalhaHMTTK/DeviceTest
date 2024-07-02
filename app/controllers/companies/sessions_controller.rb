@@ -1,5 +1,4 @@
 class Companies::SessionsController < Devise::SessionsController
-    # Your custom controller code
     
   def new
     super
@@ -9,10 +8,7 @@ class Companies::SessionsController < Devise::SessionsController
     super
   end
 
-
   def destroy
     super
   end
-
-    
-  end
+end

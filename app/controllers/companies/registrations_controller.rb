@@ -1,5 +1,5 @@
 class Companies::RegistrationsController < Devise::RegistrationsController
-  # Your custom controller code
+
   def new
     super
   end
@@ -23,5 +23,4 @@ class Companies::RegistrationsController < Devise::RegistrationsController
   def cancel 
     super
   end
-  
 end
